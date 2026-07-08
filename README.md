@@ -23,6 +23,11 @@ Pipelining pushes instruction throughput toward the theoretical ideal of **CPI �
 Every stage was built and verified **independently first** (its own module, its own components, its own testbench, its own GTKWave capture) before being consolidated into the final integrated `pipeline_top` design — which is exactly how this repo is organized.
 
 ---
+### Architecture Block Diagram
+<img alt="image" src="https://github.com/user-attachments/assets/88a14f4c-61c2-45b0-9e12-5be32493e7cb" />
+
+
+---
 
 ## Key Features
 
@@ -60,6 +65,17 @@ if (RegWriteW && (RdW != 0) && (RdW == Rs1E)) ForwardAE = 2'b01;  // MEM/WB forw
 ```
 
 This lets a dependent instruction (e.g. `sub s2, s8, s3` right after `add s8, s4, s5`) get the correct operand the *same cycle* it needs it — no NOP insertion required.
+
+---
+
+## Top-Level System Verification (`pipeline_top`)
+This section demonstrates the fully integrated 5-stage pipeline executing `memfile.hex`. The assembly program forces back-to-back Read-After-Write (RAW) data hazards to stress-test the forwarding logic end-to-end.
+
+### Terminal Execution Log
+![Pipeline Top Terminal Output](pipeline_top/pipeline_top_terminal_output.png)
+
+### Full Pipeline Simulation Waveform
+![Pipeline Top GTKWave Simulation](pipeline_top/pipeline_top_GTKWave_simulation_waveform.png)
 
 ---
 
@@ -127,8 +143,6 @@ This lets a dependent instruction (e.g. `sub s2, s8, s3` right after `add s8, s4
 ```
 
 > **Design pattern:** each stage folder carries its own local `components_*.v` (ALU, register file, control unit, etc.) so it could be testbenched completely in isolation. `pipeline_top/components_combined.v` consolidates all of those into the single shared set used by the final integrated design.
-
-> Some filenames were truncated in the repo file explorer when this README was drafted — double-check the exact `.png` extensions above match what's actually committed before relying on the image links below.
 
 ---
 
