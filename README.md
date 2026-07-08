@@ -3,7 +3,7 @@
 A 32-bit RISC-V (RV32I) CPU core built from scratch in SystemVerilog — Harvard-style split memory, a full 5-stage pipeline, and a hardware Hazard Unit that resolves Read-After-Write dependencies through forwarding, with zero stalls and zero software-inserted NOPs.
 
 [![RISC-V](https://img.shields.io/badge/ISA-RV32I-blue)](https://riscv.org/)
-[![SystemVerilog](https://img.shields.io/badge/HDL-SystemVerilog-orange)](https://en.wikipedia.org/wiki/SystemVerilog)
+![HDL](https://img.shields.io/badge/HDL-SystemVerilog_%26_Verilog-orange)
 [![Simulator](https://img.shields.io/badge/Simulator-Icarus%20Verilog-green)](http://iverilog.icarus.com/)
 [![Waveform](https://img.shields.io/badge/Waveform-GTKWave-lightgrey)](http://gtkwave.sourceforge.net/)
 
