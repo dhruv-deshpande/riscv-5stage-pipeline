@@ -40,7 +40,6 @@ For a deep dive into the RTL design choices, hazard unit logic, and module-by-mo
 | **5-Stage Pipeline** | IF → ID → EX → MEM → WB, fully pipelined control and data signals |
 | **Harvard Architecture** | Separate instruction & data memories — no structural hazards |
 | **All Six RV32I Formats** | R, I, S, B, U, and J-type decode support |
-| **Zero-Register Safety** | Hazard Unit explicitly guards against forwarding into/from `x0` |
 | **Module-by-Module Verification** | Every stage independently testbenched *and* proven again at full top-level integration |
 
 ---
