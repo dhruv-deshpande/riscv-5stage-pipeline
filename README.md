@@ -23,9 +23,13 @@ Pipelining pushes instruction throughput toward the theoretical ideal of **CPI â
 Every stage was built and verified **independently first** (its own module, its own components, its own testbench, its own GTKWave capture) before being consolidated into the final integrated `pipeline_top` design â€” which is exactly how this repo is organized.
 
 ---
+### Comprehensive Report
+For a deep dive into the RTL design choices, hazard unit logic, and module-by-module verification methodology, read the full project paper: [RV32I Architecture and Verification Report](./RISC-V_5stage_Pipeline_Report.pdf).
+
+---
+
 ### Architecture Block Diagram
 <img alt="image" src="https://github.com/user-attachments/assets/88a14f4c-61c2-45b0-9e12-5be32493e7cb" />
-
 
 ---
 
