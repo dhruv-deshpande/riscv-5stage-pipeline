@@ -1,6 +1,6 @@
 # 5-Stage Pipelined RV32I Processor with Dynamic Hazard Resolution
 
-A 32-bit RISC-V (RV32I) CPU core built from scratch in SystemVerilog — Harvard-style split memory, a full 5-stage pipeline, and a hardware Hazard Unit that resolves Read-After-Write dependencies through forwarding, with zero stalls and zero software-inserted NOPs.
+Designed, implemented, and verified a 32-bit, 5-stage pipelined RISC-V (RV32I) CPU core from scratch in SystemVerilog, with a hardware Hazard Unit that dynamically resolves Read-After-Write (RAW) dependencies via data forwarding.
 
 [![RISC-V](https://img.shields.io/badge/ISA-RV32I-blue)](https://riscv.org/)
 ![HDL](https://img.shields.io/badge/HDL-SystemVerilog_%26_Verilog-orange)
